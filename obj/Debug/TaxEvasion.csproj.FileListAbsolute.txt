@@ -1,0 +1,12 @@
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\bin\Debug\TaxEvasion.exe.config
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\bin\Debug\TaxEvasion.exe
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\bin\Debug\TaxEvasion.pdb
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\bin\Debug\Veylib.dll
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\obj\Debug\TaxEvasion.csproj.AssemblyReference.cache
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\obj\Debug\TaxEvasion.csproj.SuggestedBindingRedirects.cache
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\obj\Debug\TaxEvasion.csproj.CoreCompileInputs.cache
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\obj\Debug\TaxEvasion.csproj.CopyComplete
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\obj\Debug\TaxEvasion.exe
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\obj\Debug\TaxEvasion.pdb
+C:\Users\lun4r\OneDrive\Desktop\Projects\TaxEvasion\TaxEvasion\bin\Debug\Newtonsoft.Json.xml
