@@ -16,7 +16,7 @@ Feel free to submit pull requests for bug fixes or error corrections. Your contr
 Get the executable file from the "Releases" section.
 
 ### Note
-For those claiming this tool is a logger or grabber, the source code is open for inspection. There are no loggers in the code. Feel free to build it in Visual Studio for your peace of mind.
+For skiddies claiming this tool is a logger or grabber, the source code is open for inspection. There are no loggers in the code. Feel free to build it in Visual Studio for your peace of mind.
 
 ### Enjoy!
 Have fun using Tax-Evasion. It doesn't require any external dependencies.
