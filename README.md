@@ -1,10 +1,22 @@
 # Tax-Evasion
-- The fastest discord mass report tool in C#
-- Used via proxies and the old v6 discord api for less ratelimiting
 
-- Created by aelius / "aeliusrunsyou" in doxcentral
-- feel free to make any pull requests for bugs and or errors, we would love to handle it!
-- download the exe via "releases"
+The fastest Discord mass report tool in C#.
 
-- for any skids that say this is a logger or grabber, its open source, there isnt a logger, feel free to build it in visual studio
-- have fun, you dont need any dependencies
+### Features
+- Utilizes proxies and the old v6 Discord API to minimize rate limiting.
+- Simple and efficient tool for managing mass reports.
+
+### About the Author
+Created by Aelius, also known as "aeliusrunsyou," in Doxcentral & Discord.
+
+### Contributing
+Feel free to submit pull requests for bug fixes or error corrections. Your contributions are highly appreciated.
+
+### Download
+Get the executable file from the "Releases" section.
+
+### Note
+For those claiming this tool is a logger or grabber, the source code is open for inspection. There are no loggers in the code. Feel free to build it in Visual Studio for your peace of mind.
+
+### Enjoy!
+Have fun using Tax-Evasion. It doesn't require any external dependencies.
