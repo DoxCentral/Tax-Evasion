@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TaxEvasion.cogs;
@@ -16,84 +13,47 @@ namespace TaxEvasion
         {
             CLI.Start(Settings.sp);
 
-            var token = CLI.ReadLine(Color.Green, "Enter your discord token : ");
-            CLI.Clear();
-
-            var guildID = CLI.ReadLine(Color.Green, "Enter the guild id : ");
-            CLI.Clear();
-
-            var channelID = CLI.ReadLine(Color.Green, "Enter the channel id : ");
-            CLI.Clear();
-
-            var messageID = CLI.ReadLine(Color.Green, "Enter the message id : ");
-            CLI.Clear();
-
-            CLI.WriteLine(Color.Blue, "Enter Reason/Why =>");
-            var rsp = new SelectionMenu("1 : Illegal Conent", "2 : Harrassment", "3 : Spam or Phishing Links", "4 : Self harm", "5 : NSFW Content").Activate();
-
-            switch (rsp)
+            try
             {
-                case "1 : Illegal Conent":
-                    {
-                        int choosing = 1;
-                        var amt = CLI.ReadLine(Color.Green, "How many reports? : ");
+                var token = GetInput("Enter your Discord token: ", Color.Green);
+                var guildID = GetInput("Enter the guild ID: ", Color.Green);
+                var channelID = GetInput("Enter the channel ID: ", Color.Green);
+                var messageID = GetInput("Enter the message ID: ", Color.Green);
+
+                CLI.WriteLine(Color.Blue, "Enter Reason/Why =>");
+                var rsp = new SelectionMenu("1 : Illegal Content", "2 : Harassment", "3 : Spam or Phishing Links", "4 : Self harm", "5 : NSFW Content").Activate();
+
+                int choosing = 0;
+
+                switch (rsp)
+                {
+                    case "1 : Illegal Content": choosing = 1; break;
+                    case "2 : Harassment": choosing = 2; break;
+                    case "3 : Spam or Phishing Links": choosing = 3; break;
+                    case "4 : Self harm": choosing = 4; break;
+                    case "5 : NSFW Content": choosing = 5; break;
+                    default:
                         CLI.Clear();
-
-                        await Events.MRPT(token, choosing, guildID, channelID, messageID, Convert.ToInt32(amt));
-
-                        break;
-                    }
-                case "2 : Harrassment":
-                    {
-                        int choosing = 2;
-                        var amt = CLI.ReadLine(Color.Green, "How many reports? : ");
-                        CLI.Clear();
-
-                        await Events.MRPT(token, choosing, guildID, channelID, messageID, Convert.ToInt32(amt));
-
-                        break;
-                    }
-                case "3 : Spam or Phishing Links":
-                    {
-                        int choosing = 3;
-                        var amt = CLI.ReadLine(Color.Green, "How many reports? : ");
-                        CLI.Clear();
-
-                        await Events.MRPT(token, choosing, guildID, channelID, messageID, Convert.ToInt32(amt));
-
-                        break;
-                    }
-                case "4 : Self harm":
-                    {
-                        int choosing = 4;
-                        var amt = CLI.ReadLine(Color.Green, "How many reports? : ");
-                        CLI.Clear();
-
-                        await Events.MRPT(token, choosing, guildID, channelID, messageID, Convert.ToInt32(amt));
-
-                        break;
-                    }
-                case "5 : NSFW Content":
-                    {
-                        int choosing = 5;
-                        var amt = CLI.ReadLine(Color.Green, "How many reports? : ");
-                        CLI.Clear();
-
-                        await Events.MRPT(token, choosing, guildID, channelID, messageID, Convert.ToInt32(amt));
-
-                        break;
-                    }
-                default:
-                    {
-                        CLI.Clear();
-
                         CLI.WriteLine(Color.Red, "Incorrect Option.");
                         Thread.Sleep(2000);
-
                         Environment.Exit(0);
                         break;
-                    }
+                }
+
+                var amt = GetInput("How many reports?: ", Color.Green);
+                await Events.MRPT(token, choosing, guildID, channelID, messageID, Convert.ToInt32(amt));
             }
+            catch (Exception ex)
+            {
+                CLI.WriteLine(Color.Red, $"An error occurred: {ex.Message}");
+            }
+        }
+
+        private static string GetInput(string prompt, Color color)
+        {
+            CLI.Clear();
+            return CLI.ReadLine(color, prompt);
         }
     }
 }
+
